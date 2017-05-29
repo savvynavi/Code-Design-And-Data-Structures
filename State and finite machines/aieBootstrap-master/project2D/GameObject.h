@@ -1,18 +1,15 @@
 #pragma once
 #include"FiniteStateMachine.h"
 #include"Texture.h"
+#include"Vector2.h"
 
 class GameObject{
 public:
-	GameObject(FiniteStateMachine *fsm, aie::Texture *texture) {m_fsm = fsm;}
-	virtual ~GameObject(){}
+	GameObject(FiniteStateMachine *fsm, aie::Texture *texture, Vector2 pos);
+	virtual ~GameObject();
+	void update(float deltaTime);
 
-	void update(float deltaTime){
-		if(m_fsm != nullptr){
-			m_fsm->update(this, deltaTime);
-		}
-	}
-
-protected:
 	FiniteStateMachine *m_fsm = nullptr;
+	Vector2 m_position;
+	aie::Texture *m_texture;
 };

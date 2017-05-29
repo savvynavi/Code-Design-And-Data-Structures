@@ -1,22 +1,20 @@
 #pragma once
-#include"GameObject.h"
-#include"Transition.h"
+
+#include<vector>
+
+class GameObject;
+class Transition;
 
 class State {
-public: virtual~State() {
-	for(auto t : m_transitions) delete t;
-}
-		virtual void onEnter(GameObject * object) {}
-		virtual void onExit(GameObject * object) {}
-		virtual void onUpdate(GameObject * object, float dt) = 0;
-		void addTransition(Transition * transition) {
-			m_transitions.push_back(transition);
-		}
-		State * getNextState(GameObject * gameObject) {
-			for(auto transition : m_transitions) {
-				if(transition -> isConditionMet(gameObject)) return transition - getTargetState();
-			} // no state change return nullptr; 
-		} 
+public: 
+	virtual~State();
+
+	virtual void onEnter(GameObject *object);
+	virtual void onExit(GameObject *object);
+	virtual void onUpdate(GameObject *object, float dt) = 0;
+	void addTransition(Transition *transition);
+
+	State *getNextState(GameObject *gameObject);
 protected: 
-		std::vector<Transition*> m_transitions;
+	std::vector<Transition*> m_transitions;
 };

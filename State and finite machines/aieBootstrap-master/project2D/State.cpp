@@ -20,7 +20,7 @@ void State::onUpdate(GameObject *object, float dt){
 
 }
 
-void State::addTransition(Transition * transition){
+void State::addTransition(Transition *transition){
 	m_transitions.push_back(transition);
 }
 
@@ -29,5 +29,6 @@ State* State::getNextState(GameObject *gameObject){
 		if(transition->isConditionMet(gameObject)){
 			return (transition->getTargetState());
 		}
-	} // no state change, return nullptr; 
+	} // no state change, 
+	return nullptr; 
 }

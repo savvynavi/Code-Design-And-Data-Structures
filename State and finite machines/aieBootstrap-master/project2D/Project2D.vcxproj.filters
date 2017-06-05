@@ -13,6 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\FSM.h">
+      <UniqueIdentifier>{205a1742-7c5d-42a9-8ef9-7ff46d6b97d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\FSM.cpp">
+      <UniqueIdentifier>{c9a424dd-b60a-4ac1-9b83-7bdec5fc6464}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GSM.h">
+      <UniqueIdentifier>{c89bcf84-ebb2-4a43-b482-4968def93014}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GSM.cpp">
+      <UniqueIdentifier>{83e1c5f6-b087-4959-b311-e942bcf5a29b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application2D.cpp">
@@ -21,58 +33,82 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GameObject.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Transition.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="ColourChange.cpp">
+      <Filter>Source Files\FSM.cpp</Filter>
     </ClCompile>
     <ClCompile Include="Condition.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="State.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\FSM.cpp</Filter>
     </ClCompile>
     <ClCompile Include="FiniteStateMachine.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\FSM.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>Source Files\FSM.cpp</Filter>
     </ClCompile>
     <ClCompile Include="Idle.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Random.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\FSM.cpp</Filter>
     </ClCompile>
     <ClCompile Include="Patrol.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\FSM.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Random.cpp">
+      <Filter>Source Files\FSM.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="State.cpp">
+      <Filter>Source Files\FSM.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Transition.cpp">
+      <Filter>Source Files\FSM.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="GameState.cpp">
+      <Filter>Source Files\GSM.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="GameStateManager.cpp">
+      <Filter>Source Files\GSM.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="SplashScreen.cpp">
+      <Filter>Source Files\GSM.cpp</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application2D.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Condition.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="ColourChange.h">
+      <Filter>Header Files\FSM.h</Filter>
     </ClInclude>
-    <ClInclude Include="State.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Condition.h">
+      <Filter>Header Files\FSM.h</Filter>
     </ClInclude>
     <ClInclude Include="FiniteStateMachine.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Transition.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\FSM.h</Filter>
     </ClInclude>
     <ClInclude Include="GameObject.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\FSM.h</Filter>
     </ClInclude>
     <ClInclude Include="Idle.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Random.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\FSM.h</Filter>
     </ClInclude>
     <ClInclude Include="Patrol.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\FSM.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Random.h">
+      <Filter>Header Files\FSM.h</Filter>
+    </ClInclude>
+    <ClInclude Include="State.h">
+      <Filter>Header Files\FSM.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Transition.h">
+      <Filter>Header Files\FSM.h</Filter>
+    </ClInclude>
+    <ClInclude Include="GameState.h">
+      <Filter>Header Files\GSM.h</Filter>
+    </ClInclude>
+    <ClInclude Include="GameStateManager.h">
+      <Filter>Header Files\GSM.h</Filter>
+    </ClInclude>
+    <ClInclude Include="SplashScreen.h">
+      <Filter>Header Files\GSM.h</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

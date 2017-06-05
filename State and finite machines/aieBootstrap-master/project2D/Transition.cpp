@@ -1,6 +1,6 @@
 #include"Transition.h"
 
-Transition::Transition(Condition *condition, State *target) {
+Transition::Transition(Condition *condition, State *target){
 	m_condition = condition;
 	m_state = target;
 }

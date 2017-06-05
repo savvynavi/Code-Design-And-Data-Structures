@@ -92,24 +92,32 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Application2D.cpp" />
+    <ClCompile Include="ColourChange.cpp" />
     <ClCompile Include="Condition.cpp" />
     <ClCompile Include="FiniteStateMachine.cpp" />
     <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="GameState.cpp" />
+    <ClCompile Include="GameStateManager.cpp" />
     <ClCompile Include="Idle.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Patrol.cpp" />
     <ClCompile Include="Random.cpp" />
+    <ClCompile Include="SplashScreen.cpp" />
     <ClCompile Include="State.cpp" />
     <ClCompile Include="Transition.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application2D.h" />
+    <ClInclude Include="ColourChange.h" />
     <ClInclude Include="Condition.h" />
     <ClInclude Include="FiniteStateMachine.h" />
     <ClInclude Include="GameObject.h" />
+    <ClInclude Include="GameState.h" />
+    <ClInclude Include="GameStateManager.h" />
     <ClInclude Include="Idle.h" />
     <ClInclude Include="Patrol.h" />
     <ClInclude Include="Random.h" />
+    <ClInclude Include="SplashScreen.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="Transition.h" />
   </ItemGroup>

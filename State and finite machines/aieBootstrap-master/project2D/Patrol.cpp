@@ -24,6 +24,5 @@ void Patrol::onExit(GameObject *object){
 
 //when it updates it will want to move to a new random location on the screen
 void Patrol::onUpdate(GameObject *object, float deltaTime){
-
 	object->m_position.interpolation(object->m_position, m_newPos, deltaTime);
 }

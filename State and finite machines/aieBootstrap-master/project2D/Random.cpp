@@ -13,7 +13,7 @@ Random::~Random(){
 
 bool Random::test(GameObject *object) const{
 	srand(time(NULL));
-	if((rand() % 100) <= 70){
+	if((rand() % 100) <= 40){
 		return true;
 	}
 	return false;

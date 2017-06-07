@@ -20,9 +20,13 @@
 #include"Idle.h"
 
 //Game State Manager
-#include"GameState.h"
 #include"GameStateManager.h"
+#include"GameState.h"
 #include"SplashScreen.h"
+#include"MainMenu.h"
+#include"PlayState.h"
+
+
 
 class Application2D : public aie::Application {
 public:
@@ -51,6 +55,7 @@ protected:
 	//Game state vars
 	GameStateManager*	m_gsm;
 	aie::Font*			m_font;
+	aie::Texture*		m_menuTexture;
 
 	float m_cameraX, m_cameraY;
 	float m_timer;

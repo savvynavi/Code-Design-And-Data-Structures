@@ -1,5 +1,11 @@
 #pragma once
 
+enum States{
+	SPLASH_SCREEN,
+	MAIN_MENU,
+	PLAY_STATE
+};
+
 class GameState{
 	friend class GameStateManager;
 public:

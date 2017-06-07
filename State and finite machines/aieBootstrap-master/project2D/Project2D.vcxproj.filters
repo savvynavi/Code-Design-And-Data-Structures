@@ -69,6 +69,15 @@
     <ClCompile Include="SplashScreen.cpp">
       <Filter>Source Files\GSM.cpp</Filter>
     </ClCompile>
+    <ClCompile Include="MainMenu.cpp">
+      <Filter>Source Files\GSM.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayState.cpp">
+      <Filter>Source Files\GSM.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="QuitState.cpp">
+      <Filter>Source Files\GSM.cpp</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application2D.h">
@@ -108,6 +117,15 @@
       <Filter>Header Files\GSM.h</Filter>
     </ClInclude>
     <ClInclude Include="SplashScreen.h">
+      <Filter>Header Files\GSM.h</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenu.h">
+      <Filter>Header Files\GSM.h</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayState.h">
+      <Filter>Header Files\GSM.h</Filter>
+    </ClInclude>
+    <ClInclude Include="QuitState.h">
       <Filter>Header Files\GSM.h</Filter>
     </ClInclude>
   </ItemGroup>

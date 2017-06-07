@@ -33,7 +33,7 @@ void GameStateManager::update(float deltaTime){
 		m_stateStack.pop_back();
 		tmp->onPopped();
 
-		//activate the one under th eprevious top if t exists
+		//activate the one under the previous top if it exists
 		if(m_stateStack.empty() == false){
 			m_stateStack.back()->enter();
 		}

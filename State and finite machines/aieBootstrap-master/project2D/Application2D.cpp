@@ -3,6 +3,7 @@
 #include "Font.h"
 #include "Input.h"
 #include<memory>
+#include<iostream>
 
 
 Application2D::Application2D() {
@@ -47,21 +48,28 @@ bool Application2D::startup() {
 
 	////GSM STUFF
 	
-	//setting up fonts/textures
-	m_font = new aie::Font("./font/consolas_italic.ttf", 20);
+	////setting up fonts/textures
+	//m_font = new aie::Font("./font/consolas_italic.ttf", 20);
+	//m_menuTexture = new aie::Texture("./textures/title.png");
+	//
+	//
+	//
+	////making gsm, states
+	//m_gsm = new GameStateManager(3);
+	//SplashScreen* splashScreen = new SplashScreen(m_2dRenderer, m_font, m_gsm);
+	//MainMenu* mainMenu = new MainMenu(m_2dRenderer, m_font, m_menuTexture, m_gsm);
+	//PlayState* playState = new PlayState(m_2dRenderer, m_font, m_shipTexture, m_gsm);
+	//
+	////filling gsm with states
+	//m_gsm->registerState(SPLASH_SCREEN, splashScreen);
+	//m_gsm->registerState(MAIN_MENU, mainMenu);
+	//m_gsm->registerState(PLAY_STATE, playState);
+	//
+	//
+	//
+	//
+	//m_gsm->pushState(SPLASH_SCREEN);//pushed state = current state(as at top), will start with splashscreen
 
-	//making gsm, states
-	m_gsm = new GameStateManager(1);
-	SplashScreen* splashScreen = new SplashScreen(m_2dRenderer, m_font);
-
-	//filling gsm with states
-	m_gsm->registerState(0, splashScreen);
-	
-	
-	
-	
-	
-	m_gsm->pushState(0);//pushed state = current state, will start with splashscreen
 
 	m_cameraX = 0;
 	m_cameraY = 0;
@@ -74,6 +82,7 @@ void Application2D::shutdown() {
 	delete m_shipTexture;
 	delete m_2dRenderer;
 	//delete m_player; //Finite state stuff
+
 
 }
 
@@ -88,7 +97,7 @@ void Application2D::update(float deltaTime){
 	//m_pFsm->update(m_player, deltaTime);
 
 	//Game state stuff here
-	m_gsm->update(deltaTime);
+	//m_gsm->update(deltaTime);
 }
 
 void Application2D::draw() {
@@ -106,8 +115,7 @@ void Application2D::draw() {
 	//m_2dRenderer->drawSprite(m_player->m_texture, m_player->m_position.x, m_player->m_position.y);
 
 	//GAME STATE STUFF
-
-	m_gsm->draw();
+	//m_gsm->draw();
 
 	// done drawing sprites
 	m_2dRenderer->end();

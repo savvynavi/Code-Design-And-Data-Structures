@@ -17,11 +17,9 @@ bool Application2D::startup(){
 	
 	m_2dRenderer = new aie::Renderer2D();
 
-	m_texture = new aie::Texture("./textures/numbered_grid.tga");
-	m_shipTexture = new aie::Texture("./textures/ship.png");
-
+	ResourceManager::getInstance().get("./textures/ship.png", ResourceManager::TEXTURE);
+	//ResourceManager::getInstance().get("./textures/numbered_grid.tga", ResourceManager::TEXTURE);
 	//RESOURCE MANAGER STUFF
-
 
 	m_cameraX = 0;
 	m_cameraY = 0;
@@ -31,8 +29,6 @@ bool Application2D::startup(){
 }
 
 void Application2D::shutdown(){
-	delete m_texture;
-	delete m_shipTexture;
 	delete m_2dRenderer;
 	//RESOURCE MANAGEMENT
 
@@ -59,6 +55,9 @@ void Application2D::draw(){
 
 	// begin drawing sprites
 	m_2dRenderer->begin();
+
+	m_2dRenderer->drawSprite(m_shipTexture->as<aie::Texture>(), 150, 150);
+	//m_2dRenderer->drawSprite((aie::Texture*)m_shipTexture->getData(), 150, 150);
 
 
 	// done drawing sprites

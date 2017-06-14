@@ -27,13 +27,13 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ResourceManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application2D.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Resource.h">
-      <Filter>Header Files\Resource Manager Singleton.h</Filter>
     </ClInclude>
     <ClInclude Include="ResourceManager.h">
       <Filter>Header Files\Resource Manager Singleton.h</Filter>
@@ -44,5 +44,11 @@
     <ClInclude Include="ResourceBase.h">
       <Filter>Header Files\Resource Manager Singleton.h</Filter>
     </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files\Resource Manager Singleton.h</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>

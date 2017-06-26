@@ -22,6 +22,9 @@
     <Filter Include="Header Files\Resource Manager">
       <UniqueIdentifier>{44dc4503-970f-4e25-b19b-fa76d391e3d9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Resource Manager">
+      <UniqueIdentifier>{a86b23d9-1ac7-464b-bed5-1864d9e56802}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application2D.cpp">
@@ -31,6 +34,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Snack.cpp">
+      <Filter>Source Files\Prototype</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceManager.cpp">
+      <Filter>Source Files\Resource Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="SnackFactory.cpp">
       <Filter>Source Files\Prototype</Filter>
     </ClCompile>
   </ItemGroup>
@@ -44,14 +53,17 @@
     <ClInclude Include="Snack.h">
       <Filter>Header Files\Prototype</Filter>
     </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files\Resource Manager</Filter>
+    </ClInclude>
     <ClInclude Include="ResourceBase.h">
       <Filter>Header Files\Resource Manager</Filter>
     </ClInclude>
     <ClInclude Include="ResourceManager.h">
       <Filter>Header Files\Resource Manager</Filter>
     </ClInclude>
-    <ClInclude Include="Resource.h">
-      <Filter>Header Files\Resource Manager</Filter>
+    <ClInclude Include="SnackFactory.h">
+      <Filter>Header Files\Prototype</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

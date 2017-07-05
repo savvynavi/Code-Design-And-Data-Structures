@@ -1,9 +1,7 @@
 #pragma once
+#include"Renderer2D.h"
 class TreeNode;
 
-namespace aie{
-	class Renderer2D;
-}
 
 
 class BinaryTree{

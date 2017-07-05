@@ -85,7 +85,7 @@ bool BinaryTree::findNode(int nSearchValue, TreeNode** ppOutNode, TreeNode** ppO
 }
 
 //recursive fn, keeps drawing nodes/lines between them until there are no more nodes left in tree
-void BinaryTree::draw(aie::Renderer2D* renderer, TreeNode* pNode, int x, int y, int horizontalSpacing, TreeNode* selected = nullptr){
+void BinaryTree::draw(aie::Renderer2D* renderer, TreeNode* pNode, int x, int y, int horizontalSpacing, TreeNode* selected){
 	horizontalSpacing /= 2;
 
 	if(pNode){

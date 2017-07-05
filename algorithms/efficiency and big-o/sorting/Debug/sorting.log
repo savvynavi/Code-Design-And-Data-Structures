@@ -1,0 +1,5 @@
+﻿  main.cpp
+c:\users\s170841\documents\visual studio 2015\projects\code design and data structures\sorting\sorting\main.cpp(30): warning C4018: '<': signed/unsigned mismatch
+c:\users\s170841\documents\visual studio 2015\projects\code design and data structures\sorting\sorting\main.cpp(31): warning C4018: '<': signed/unsigned mismatch
+c:\users\s170841\documents\visual studio 2015\projects\code design and data structures\sorting\sorting\main.cpp(45): warning C4018: '<': signed/unsigned mismatch
+  sorting.vcxproj -> C:\Users\s170841\Documents\Visual Studio 2015\Projects\Code Design and Data Structures\sorting\Debug\sorting.exe

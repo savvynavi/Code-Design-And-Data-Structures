@@ -1,10 +1,11 @@
 #include"TreeNode.h"
+#include"Font.h"
 #include<stdio.h>
 
 extern aie::Font* g_systemFont;
 
 TreeNode::TreeNode(int value){
-
+	m_value = value;
 }
 
 TreeNode::~TreeNode(){

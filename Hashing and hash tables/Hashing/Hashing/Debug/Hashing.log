@@ -1,0 +1,4 @@
+﻿  main.cpp
+c:\users\s170841\documents\visual studio 2015\projects\code design and data structures\hashing and hash tables\hashing\hashing\main.cpp(9): warning C4305: 'initializing': truncation from 'int' to 'unsigned char'
+c:\users\s170841\documents\visual studio 2015\projects\code design and data structures\hashing and hash tables\hashing\hashing\main.cpp(9): warning C4309: 'initializing': truncation of constant value
+  Hashing.vcxproj -> C:\Users\s170841\Documents\Visual Studio 2015\Projects\Code Design and Data Structures\Hashing and hash tables\Hashing\Debug\Hashing.exe

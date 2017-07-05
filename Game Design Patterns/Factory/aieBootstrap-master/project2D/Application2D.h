@@ -36,7 +36,6 @@ protected:
 	aie::Font*			m_font;
 	aie::Audio*			m_audio;
 
-
 	std::unique_ptr<SnackFactory> m_snackFactory;
 	std::list<std::shared_ptr<Snack>> m_snacks;
 

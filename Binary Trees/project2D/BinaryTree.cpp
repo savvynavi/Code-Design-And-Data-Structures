@@ -53,7 +53,7 @@ void BinaryTree::remove(int nValue){
 
 //returns node where value is found at, also keeps track of parent node => Somehow make it return 2 values?
 TreeNode* BinaryTree::find(int nValue){
-	TreeNode* currentNode = m_pRoot;
+	/*TreeNode* currentNode = m_pRoot;
 	TreeNode* currentParent = nullptr;
 	while(currentNode != nullptr){
 		if(nValue == currentNode->getData()){
@@ -69,19 +69,35 @@ TreeNode* BinaryTree::find(int nValue){
 		}
 	}
 
-	return nullptr;
+	return nullptr;*/
+	TreeNode* currentNode = m_pRoot;
+	TreeNode* currentParent = nullptr;
+	findNode(nValue, &currentNode, &currentParent);
+	return currentNode;
+}
+
+//http://dev-faqs.blogspot.com.au/2012/03/remove-node-from-binary-search-tree.html
+
+//retunrs true if specified node is found -> maybe store parent as member var as too hard
+bool BinaryTree::findNode (int nSearchValue, TreeNode** ppOutNode, TreeNode** ppOutParent){
+	while(ppOutNode != nullptr){
+		if(nSearchValue == (*ppOutNode)->getData()){
+			return true;
+		}else{
+			if(nSearchValue < (*ppOutNode)->getData()){
+				(*ppOutParent) = (*ppOutNode);
+				(*ppOutNode) = (*ppOutNode)->getLeft();
+			}else{
+				(*ppOutParent) = (*ppOutNode);
+				(*ppOutNode) = (*ppOutNode)->getRight();
+			}
+		}
+	}
+	return false;
 }
 
 void BinaryTree::draw(aie::Renderer2D* renderer, TreeNode* selected){
 	draw(renderer, m_pRoot, 640, 680, 640, selected);
-}
-
-//retunrs true if specified node is found
-bool BinaryTree::findNode(int nSearchValue, TreeNode** ppOutNode, TreeNode** ppOutParent){
-	if(this->find(nSearchValue) == nullptr){
-		return false;
-	}
-	return true;
 }
 
 //recursive fn, keeps drawing nodes/lines between them until there are no more nodes left in tree

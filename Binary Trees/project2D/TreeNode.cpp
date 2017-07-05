@@ -6,6 +6,7 @@ extern aie::Font* g_systemFont;
 
 TreeNode::TreeNode(int value){
 	m_value = value;
+	m_font = new aie::Font("/font/consolas.ttf", 10);
 }
 
 TreeNode::~TreeNode(){

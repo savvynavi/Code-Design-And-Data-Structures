@@ -11,6 +11,8 @@ Application2D::~Application2D() {
 
 }
 
+aie::Font* g_systemFont = nullptr;
+
 bool Application2D::startup() {
 	
 	m_2dRenderer = new aie::Renderer2D();
@@ -21,6 +23,8 @@ bool Application2D::startup() {
 	m_font = new aie::Font("./font/consolas.ttf", 32);
 
 	m_audio = new aie::Audio("./audio/powerup.wav");
+
+	g_systemFont = new aie::Font("./font/consolas.ttf", 32);
 
 	m_cameraX = 0;
 	m_cameraY = 0;
@@ -44,12 +48,9 @@ void Application2D::update(float deltaTime) {
 
 	// input example
 	aie::Input* input = aie::Input::getInstance();
-
-
-
-	// exit the application
-	if (input->isKeyDown(aie::INPUT_KEY_ESCAPE))
-		quit();
+	
+	static int value = 0;
+	ImGui::InputInt("Value", &value);
 }
 
 void Application2D::draw() {

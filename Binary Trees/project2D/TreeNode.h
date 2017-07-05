@@ -1,5 +1,6 @@
 #pragma once
 #include"Renderer2D.h"
+#include"Font.h"
 
 
 class TreeNode{
@@ -25,4 +26,5 @@ private:
 	//nodes children
 	TreeNode* m_left;
 	TreeNode* m_right;
+	aie::Font* m_font;
 };

@@ -2,6 +2,7 @@
 #include "Texture.h"
 #include "Font.h"
 #include "Input.h"
+#include"Imgui.h"
 
 Application2D::Application2D() {
 
@@ -51,6 +52,40 @@ void Application2D::update(float deltaTime) {
 	
 	static int value = 0;
 	ImGui::InputInt("Value", &value);
+
+	if(ImGui::Button("Insert", ImVec2(150, 0))){
+		m_binaryTree.insert(value);
+		m_selectedNode = m_binaryTree.find(value);
+	}
+
+	if(ImGui::Button("Remove", ImVec2(150, 0))){
+		m_binaryTree.remove(value);
+	}
+
+	if(ImGui::Button("Find", ImVec2(150, 0))){
+		m_selectedNode = m_binaryTree.find(value);
+	}
+
+	if(ImGui::Button("PreOrder Depthfirst", ImVec2(150, 0))){
+		m_binaryTree.DepthFirstPreOrder(m_binaryTree.findRoot());
+	}
+
+	if(ImGui::Button("PostOrder Depthfirst", ImVec2(150, 0))){
+		m_binaryTree.DepthFirstPostOrder(m_binaryTree.findRoot());
+	}
+
+	if(ImGui::Button("InOrder Depthfirst", ImVec2(150, 0))){
+		m_binaryTree.DepthFirstInOrder(m_binaryTree.findRoot());
+	}
+
+	if(ImGui::Button("Bredthfirst", ImVec2(150, 0))){
+		m_binaryTree.BredthFirst(m_binaryTree.findRoot());
+	}
+
+	//exit the app
+	if(input->isKeyDown(aie::INPUT_KEY_ESCAPE)){
+		quit();
+	}
 }
 
 void Application2D::draw() {
@@ -64,7 +99,11 @@ void Application2D::draw() {
 	// begin drawing sprites
 	m_2dRenderer->begin();
 
+	//tree drawing here
+	m_binaryTree.draw(m_2dRenderer, m_selectedNode);
 
+	//output some text
+	m_2dRenderer->drawText(g_systemFont, "Press ESC to quit", 0, 0);
 
 	// done drawing sprites
 	m_2dRenderer->end();

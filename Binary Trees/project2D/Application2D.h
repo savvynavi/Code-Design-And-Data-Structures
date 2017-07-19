@@ -26,7 +26,7 @@ protected:
 	aie::Font*			m_font;
 	aie::Audio*			m_audio;
 
-	BinaryTree*			m_binaryTree;
+	BinaryTree			m_binaryTree;
 	TreeNode*			m_selectedNode;
 
 	float m_cameraX, m_cameraY;

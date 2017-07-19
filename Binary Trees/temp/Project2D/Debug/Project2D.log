@@ -1,9 +1,5 @@
-﻿  TreeNode.cpp
-c:\users\s170841\documents\visual studio 2015\projects\code design and data structures\binary trees\project2d\treenode.cpp(59): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\s170841\documents\visual studio 2015\projects\code design and data structures\binary trees\project2d\treenode.cpp(66): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\s170841\documents\visual studio 2015\projects\code design and data structures\binary trees\project2d\treenode.cpp(69): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\s170841\documents\visual studio 2015\projects\code design and data structures\binary trees\project2d\treenode.cpp(56): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
-  Application2D.cpp
-  Generating Code...
-  Project2D.vcxproj -> C:\Users\s170841\Documents\Visual Studio 2015\Projects\Code Design and Data Structures\Binary Trees\temp\Project2D\Debug\Project2D.exe
+﻿  BinaryTree.cpp
+c:\users\microwave-chan\documents\aie\code design and data structures\binary trees\project2d\binarytree.cpp(204): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\microwave-chan\documents\aie\code design and data structures\binary trees\project2d\binarytree.cpp(210): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Project2D.vcxproj -> C:\Users\Microwave-chan\Documents\AIE\Code Design and Data Structures\Binary Trees\temp\Project2D\Debug\Project2D.exe
+  Project2D.vcxproj -> C:\Users\Microwave-chan\Documents\AIE\Code Design and Data Structures\Binary Trees\temp\Project2D\Debug\Project2D.pdb (Full PDB)

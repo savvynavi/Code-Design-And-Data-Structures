@@ -4,22 +4,18 @@
 
 class Node{
 public:
+	Node(int data);
 	Node();
 	~Node();
+	int& getData();
+	Node* getNext();
+	Node* getPrevious();
 
-	void pushFront(int data);
-	void pushBack(int data);
-
-	Node::iterator begin();
+	void setData(int data);
+	void setNext(Node* next);
+	void setPrevious(Node* previous);
 private:
-	Node* m_first;
-	Node* m_last;
-
-	Node* m_head;
-	Node* m_tail;
-
+	int m_data;
 	Node* m_next;
 	Node* m_previous;
-
-	int m_data;
 };

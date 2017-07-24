@@ -1,4 +1,17 @@
 ﻿  main.cpp
-c:\users\s170841\documents\visual studio 2015\projects\code design and data structures\hashing and hash tables\hashing\hashing\main.cpp(9): warning C4305: 'initializing': truncation from 'int' to 'unsigned char'
-c:\users\s170841\documents\visual studio 2015\projects\code design and data structures\hashing and hash tables\hashing\hashing\main.cpp(9): warning C4309: 'initializing': truncation of constant value
-  Hashing.vcxproj -> C:\Users\s170841\Documents\Visual Studio 2015\Projects\Code Design and Data Structures\Hashing and hash tables\Hashing\Debug\Hashing.exe
+c:\users\microwave-chan\documents\aie\code design and data structures\hashing and hash tables\hashing\hashing\main.cpp(9): warning C4305: 'initializing': truncation from 'int' to 'unsigned char'
+c:\users\microwave-chan\documents\aie\code design and data structures\hashing and hash tables\hashing\hashing\main.cpp(9): warning C4309: 'initializing': truncation of constant value
+c:\users\microwave-chan\documents\aie\code design and data structures\hashing and hash tables\hashing\hashing\hashtable.h(13): error C2955: 'std::hash': use of class template requires template argument list
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstddef(373): note: see declaration of 'std::hash'
+  c:\users\microwave-chan\documents\aie\code design and data structures\hashing and hash tables\hashing\hashing\hashtable.h(12): note: while compiling class template member function 'int &HashTable<unsigned char *,int>::operator [](const KeyType &)'
+          with
+          [
+              KeyType=unsigned char *
+          ]
+  c:\users\microwave-chan\documents\aie\code design and data structures\hashing and hash tables\hashing\hashing\main.cpp(19): note: see reference to function template instantiation 'int &HashTable<unsigned char *,int>::operator [](const KeyType &)' being compiled
+          with
+          [
+              KeyType=unsigned char *
+          ]
+  c:\users\microwave-chan\documents\aie\code design and data structures\hashing and hash tables\hashing\hashing\main.cpp(14): note: see reference to class template instantiation 'HashTable<unsigned char *,int>' being compiled
+c:\users\microwave-chan\documents\aie\code design and data structures\hashing and hash tables\hashing\hashing\hashtable.h(14): error C3536: 'hashedKey': cannot be used before it is initialized

@@ -27,6 +27,9 @@
     <ClCompile Include="Node.cpp">
       <Filter>Source Files\Linked list.cpp</Filter>
     </ClCompile>
+    <ClCompile Include="LinkedListIterator.cpp">
+      <Filter>Source Files\Linked list.cpp</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Node.h">

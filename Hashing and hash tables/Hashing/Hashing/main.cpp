@@ -16,7 +16,7 @@ int main(){
 	table.addValue(data);
 	table.print(data);
 	cout << endl;
-	//cout << table[data] << endl;
+	cout << table[data] << endl;
 	system("pause");
 	return 0;
 }

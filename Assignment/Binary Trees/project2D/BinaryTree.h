@@ -16,7 +16,7 @@ public:
 	TreeNode* findRoot();
 	TreeNode* find(int nValue);
 	void draw(aie::Renderer2D* renderer, TreeNode* selected = nullptr);
-	int BinaryTree::searchMin(TreeNode* currentNode);
+	int searchMin(TreeNode* currentNode);
 	void DepthFirstPostOrder(TreeNode* pNode);
 	void DepthFirstPreOrder(TreeNode* pNode);
 	void DepthFirstInOrder(TreeNode* pNode);

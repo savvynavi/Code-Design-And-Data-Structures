@@ -24,7 +24,7 @@ bool Application2D::startup() {
 	MainMenu* mainMenu = new MainMenu(m_2dRenderer, m_font, m_menuTexture, m_menuMusic, m_gsm);
 	PlayState* playState = new PlayState(m_2dRenderer, m_font, m_gsm);
 	PauseMenu* pauseMenu = new PauseMenu(m_2dRenderer, m_font, m_gsm);
-	Quit* quit = new Quit(m_gsm);
+	Quit* quit = new Quit(m_gsm, this);
 	
 	//filling gsm with states
 	m_gsm->registerState(SPLASH_SCREEN, splashScreen);

@@ -160,13 +160,13 @@ LinkedListIterator LinkedList::begin(){
 	return(LinkedListIterator(m_first));
 }
 
-//points to 1 past the last node
+//points to 1 past the last node(should be a nullptr)
 LinkedListIterator LinkedList::end(){
 	return(LinkedListIterator());
 }
 
 void LinkedList::erase(LinkedListIterator& index){
-	if(index.getNode() != nullptr){
+	if(index.getNode() == nullptr){
 		return;
 	}
 
@@ -194,7 +194,7 @@ LinkedListIterator LinkedList::find(const int& data){
 		if(tmp->getData() == data){
 			return LinkedListIterator(tmp);
 		}
-		tmp - tmp->getNext();
+		tmp = tmp->getNext();
 	}
 	return LinkedListIterator();
 }

@@ -11,6 +11,12 @@ PlayState::PlayState(aie::Renderer2D* renderer, std::shared_ptr<ResourceBase> fo
 	m_walk1Sprite = ResourceManager::getInstance().get("./textures/caseyWalk1.png", ResourceManager::TEXTURE);
 	m_walk2Sprite = ResourceManager::getInstance().get("./textures/caseyWalk2.png", ResourceManager::TEXTURE);
 	m_currentSprite = m_idleSprite;
+	
+	//stuff
+	m_salamancerStand = ResourceManager::getInstance().get("./textures/salamancerStand.png", ResourceManager::TEXTURE);
+	m_salamancerWalk1 = ResourceManager::getInstance().get("./textures/salamancerWalk1.png", ResourceManager::TEXTURE);
+	m_salamancerWalk2 = ResourceManager::getInstance().get("./textures/salamancerWalk2.png", ResourceManager::TEXTURE);
+	salamancerActive = false;
 
 	x = 1280 / 2;
 	y = 720 / 3;
@@ -45,6 +51,16 @@ void PlayState::onUpdate(float deltaTime){
 		} else{
 			m_currentSprite = m_walk2Sprite;
 		}
+	} //stuff
+	else if(m_input->isKeyDown(aie::INPUT_KEY_E)){
+		if(salamancerActive == false){
+			m_idleSprite = m_salamancerStand;
+			m_walk1Sprite = m_salamancerWalk1;
+			m_walk2Sprite = m_salamancerWalk2;
+		}
+	}
+	else{
+		m_currentSprite = m_idleSprite;
 	}
 }
 

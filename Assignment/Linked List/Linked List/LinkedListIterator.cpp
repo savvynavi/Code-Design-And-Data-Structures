@@ -7,7 +7,7 @@ LinkedListIterator::LinkedListIterator(Node* node){
 }
 
 LinkedListIterator::LinkedListIterator(){
-
+	m_currentNode = nullptr;
 }
 
 LinkedListIterator::~LinkedListIterator(){

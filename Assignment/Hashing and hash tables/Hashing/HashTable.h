@@ -36,7 +36,7 @@ public:
 		if(m_data[hashKey] == NULL){
 			m_data[hashKey] = data;
 		}else{
-			std::cout << "COLLISION! : " << key << std::endl;
+			std::cout << "COLLISION! : " << key << " WITH: " << m_data[hashKey] << std::endl;
 		}
 	}
 
@@ -51,7 +51,6 @@ public:
 	void clear(){ 
 		for(int i = 0; i < m_size; i++){
 			m_data[i] = NULL;
-			//std::cout <<"CLEAR: "<< m_data[i] << endl;
 		}
 	}
 

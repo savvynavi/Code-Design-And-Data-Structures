@@ -5,7 +5,6 @@
 #include "Audio.h"
 #include"Font.h"
 #include"Vector2.h"
-#include"Player.h"
 
 //gamestates
 #include"GameStateManager.h"
@@ -58,7 +57,6 @@ protected:
 	//resource manager
 	std::shared_ptr<ResourceBase>	m_images;
 	std::shared_ptr<ResourceBase>	m_audio;
-	Player*							m_player;
 
 	float m_cameraX, m_cameraY;
 	float m_timer;

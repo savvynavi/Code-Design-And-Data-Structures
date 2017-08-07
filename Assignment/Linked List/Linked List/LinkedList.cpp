@@ -165,6 +165,7 @@ LinkedListIterator LinkedList::end(){
 	return(LinkedListIterator());
 }
 
+//erases node at iterator given
 void LinkedList::erase(LinkedListIterator& index){
 	if(index.getNode() == nullptr){
 		return;
@@ -188,6 +189,7 @@ void LinkedList::erase(LinkedListIterator& index){
 	m_elements--;
 }
 
+//returns iterator to given data if available
 LinkedListIterator LinkedList::find(const int& data){
 	auto tmp = m_first;
 	while(tmp != nullptr){

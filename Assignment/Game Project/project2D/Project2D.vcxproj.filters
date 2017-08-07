@@ -125,14 +125,14 @@
     <ClInclude Include="PlayState.h">
       <Filter>Header Files\GSM.h</Filter>
     </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="PauseMenu.h">
       <Filter>Header Files\GSM.h</Filter>
     </ClInclude>
     <ClInclude Include="Quit.h">
       <Filter>Header Files\GSM.h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Catch-master\include\catch.hpp">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

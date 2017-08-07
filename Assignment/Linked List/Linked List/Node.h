@@ -1,7 +1,5 @@
 #pragma once
 
-//has all the functionality(template out int value at some point)
-
 class Node{
 public:
 	Node(int data);

@@ -1,7 +1,6 @@
 #pragma once
 #include "Node.h"
 #include"LinkedListIterator.h"
-//just calls functions from node
 
 class LinkedList{
 public:

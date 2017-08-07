@@ -75,7 +75,7 @@ int linearSearch(const int* array, int size, int value){
 	return -1;
 }
 
-//binarySearch()
+//binary Search
 int binarySearch(const int* array, int size, int value){
 	//checks to see if array isn't 0 size
 	if(size <= 0) {

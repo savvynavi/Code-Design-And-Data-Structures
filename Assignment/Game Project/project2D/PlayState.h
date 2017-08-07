@@ -23,9 +23,6 @@ protected:
 	std::shared_ptr<ResourceBase> m_walk1Sprite;
 	std::shared_ptr<ResourceBase> m_walk2Sprite;
 	std::shared_ptr<ResourceBase> m_currentSprite;
-	std::shared_ptr<ResourceBase> m_salamancerStand;
-	std::shared_ptr<ResourceBase> m_salamancerWalk1;
-	std::shared_ptr<ResourceBase> m_salamancerWalk2;
 
 	aie::Input* m_input;
 	GameStateManager* m_gsm;
@@ -33,5 +30,4 @@ protected:
 
 	float x;
 	float y;
-	bool salamancerActive;
 };

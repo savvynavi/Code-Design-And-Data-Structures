@@ -1,11 +1,1 @@
-﻿  PlayState.cpp
-  Generating Code...
-  Compiling...
-  Application2D.cpp
-  Generating Code...
-  Skipping... (no relevant changes detected)
-  main.cpp
-  Quit.cpp
-LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
-  Project2D.vcxproj -> C:\Users\Microwave-chan\Documents\AIE\Code Design and Data Structures\Assignment\Game Project\temp\Project2D\Debug\Project2D.exe
-  Project2D.vcxproj -> C:\Users\Microwave-chan\Documents\AIE\Code Design and Data Structures\Assignment\Game Project\temp\Project2D\Debug\Project2D.pdb (Full PDB)
+﻿

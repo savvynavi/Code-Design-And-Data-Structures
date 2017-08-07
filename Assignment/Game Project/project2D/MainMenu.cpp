@@ -8,7 +8,6 @@ MainMenu::MainMenu(aie::Renderer2D* renderer, std::shared_ptr<ResourceBase> font
 	m_audio = audio;
 	m_texture = texture;
 	m_gsm = gsm;
-	//m_app = app;
 	m_menuSelect = 0;
 	m_selectorHeight = 400;
 	m_input = aie::Input::getInstance();
@@ -29,6 +28,7 @@ void MainMenu::onUpdate(float deltaTime){
 			//transition to play state
 			m_gsm->popState();
 			m_gsm->pushState(PLAY_STATE);
+			onEnter();
 		}else if(m_menuSelect == 1){
 			//quit
 			m_gsm->popState();

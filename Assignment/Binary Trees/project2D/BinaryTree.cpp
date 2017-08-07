@@ -61,6 +61,7 @@ int BinaryTree::searchMin(TreeNode* currentNode) {
 	return smallestNum;
 }
 
+//goes through tree, removes the value inputed and cleans up branches
 void BinaryTree::remove(int nValue){
 	TreeNode* currentNode = m_pRoot;
 	TreeNode* currentParent = nullptr;
@@ -78,8 +79,6 @@ void BinaryTree::remove(int nValue){
 
 			//Put the min value in current node
 			currentNode->setData(value);
-
-			//check if minNode is left a child
 			if(minParent->getLeft() == minNode){
 				//Set the left child of the parent to the its former child's right child.
 				minParent->setLeft(minNode->getRight());

@@ -1,0 +1,18 @@
+﻿  AABB2.cpp
+  Application2D.cpp
+  Bubble.cpp
+  Circle.cpp
+  Factory.cpp
+  GameState.cpp
+  GameStateManager.cpp
+  main.cpp
+  MainMenu.cpp
+  PauseMenu.cpp
+  PlayState.cpp
+  Quit.cpp
+  ResourceManager.cpp
+  SplashScreen.cpp
+  Generating code
+  All 7021 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Project2D.vcxproj -> C:\Users\s170841\Documents\Visual Studio 2015\Projects\Code Design and Data Structures\Assignment\Game Project\temp\Project2D\Release\Project2D.exe

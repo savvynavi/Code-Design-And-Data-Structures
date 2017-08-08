@@ -3,6 +3,8 @@
 #include "Application.h"
 #include "Renderer2D.h"
 
+#include<windows.h>
+
 struct Entity {
 	float x = 0, y = 0;
 	float rotation = 0;
@@ -10,6 +12,7 @@ struct Entity {
 	float r = 0, g = 0, b = 0;
 	float size = 1;
 };
+
 
 class EntityEditorApp : public aie::Application {
 public:

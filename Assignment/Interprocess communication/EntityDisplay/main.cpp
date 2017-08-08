@@ -1,4 +1,5 @@
 #include "EntityDisplayApp.h"
+//user of created memory
 
 int main() {
 	

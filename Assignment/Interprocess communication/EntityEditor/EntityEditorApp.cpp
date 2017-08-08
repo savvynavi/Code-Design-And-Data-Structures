@@ -14,7 +14,22 @@ EntityEditorApp::~EntityEditorApp() {
 }
 
 bool EntityEditorApp::startup() {
-	
+	HANDLE fileHandle = CreateFileMapping(
+		INVALID_HANDLE_VALUE,
+		nullptr,
+		PAGE_READWRITE,
+		0, sizeof(Entity) * ENTITY_COUNT,
+		L"SharedMemory");
+
+	Entity* sharedEntityMem = (Entity*)MapViewOfFile(fileHandle, FILE_MAP_ALL_ACCESS, 0, 0, sizeof(Entity) * ENTITY_COUNT);
+
+	for(int i = 0; i < ENTITY_COUNT; i++){
+		*sharedEntityMem = m_entities[i];
+	}
+
+
+	UnmapViewOfFile(sharedEntityMem);
+	CloseHandle(fileHandle);
 	m_2dRenderer = new aie::Renderer2D();
 	m_font = new aie::Font("./font/consolas.ttf", 32);
 	
@@ -35,9 +50,12 @@ void EntityEditorApp::update(float deltaTime) {
 	aie::Input* input = aie::Input::getInstance();
 
 	// exit the application
-	if (input->isKeyDown(aie::INPUT_KEY_ESCAPE))
+	if(input->isKeyDown(aie::INPUT_KEY_ESCAPE))
 		quit();
 
+
+	
+	///////////////////////////////////////
 	// select an entity to edit
 	static int selection = 0;
 	ImGui::SliderInt("entry #", &selection, 0, ENTITY_COUNT - 1);
@@ -68,6 +86,8 @@ void EntityEditorApp::update(float deltaTime) {
 		if (entity.y < 0)
 			entity.y += getWindowHeight();
 	}
+	////////////////////////////////////////
+
 }
 
 void EntityEditorApp::draw() {

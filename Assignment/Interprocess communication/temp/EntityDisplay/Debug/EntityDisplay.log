@@ -1,0 +1,5 @@
+﻿  main.cpp
+  EntityDisplayApp.cpp
+  Generating Code...
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  EntityDisplay.vcxproj -> C:\Users\s170841\Documents\Visual Studio 2015\Projects\Code Design and Data Structures\Assignment\Interprocess communication\temp\EntityDisplay\Debug\EntityDisplay.exe

@@ -1,1 +1,15 @@
-﻿  Project2D.vcxproj -> C:\Users\s170841\Documents\Visual Studio 2015\Projects\Code Design and Data Structures\Assignment\Binary Trees\temp\Project2D\Debug\Project2D.exe
+﻿  main.cpp
+  TreeNode.cpp
+c:\users\s170841\documents\visual studio 2015\projects\code design and data structures\assignment\binary trees\project2d\treenode.cpp(60): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\s170841\documents\visual studio 2015\projects\code design and data structures\assignment\binary trees\project2d\treenode.cpp(67): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\s170841\documents\visual studio 2015\projects\code design and data structures\assignment\binary trees\project2d\treenode.cpp(70): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\s170841\documents\visual studio 2015\projects\code design and data structures\assignment\binary trees\project2d\treenode.cpp(57): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+  BinaryTree.cpp
+c:\users\s170841\documents\visual studio 2015\projects\code design and data structures\assignment\binary trees\project2d\binarytree.cpp(203): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\s170841\documents\visual studio 2015\projects\code design and data structures\assignment\binary trees\project2d\binarytree.cpp(209): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Application2D.cpp
+  Generating Code...
+  LINK : C:\Users\s170841\Documents\Visual Studio 2015\Projects\Code Design and Data Structures\Assignment\Binary Trees\temp\Project2D\Debug\Project2D.exe not found or not built by the last incremental link; performing full link
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  Project2D.vcxproj -> C:\Users\s170841\Documents\Visual Studio 2015\Projects\Code Design and Data Structures\Assignment\Binary Trees\temp\Project2D\Debug\Project2D.exe

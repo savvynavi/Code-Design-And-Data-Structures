@@ -39,7 +39,6 @@ void EntityDisplayApp::update(float deltaTime) {
 	Entity* entity = (Entity*)MapViewOfFile(fileHandle, FILE_MAP_ALL_ACCESS, 0, 0, sizeof(Entity));
 	if(entity != nullptr){
 		m_entities.push_back(*entity);
-
 	}
 
 
@@ -47,8 +46,7 @@ void EntityDisplayApp::update(float deltaTime) {
 	if (input->isKeyDown(aie::INPUT_KEY_ESCAPE))
 		quit();
 
-	UnmapViewOfFile(entity);
-	CloseHandle(fileHandle);
+
 }
 
 void EntityDisplayApp::draw() {

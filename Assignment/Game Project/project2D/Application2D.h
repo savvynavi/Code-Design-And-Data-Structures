@@ -39,10 +39,10 @@ public:
 
 protected:
 
-	aie::Renderer2D*	m_2dRenderer;
+	aie::Renderer2D*					m_2dRenderer;
 	
 	//gsm vars
-	GameStateManager*	m_gsm;
+	GameStateManager*					m_gsm;
 	std::shared_ptr<ResourceBase>		m_menuMusic;
 	std::shared_ptr<ResourceBase>		m_font;
 	std::shared_ptr<ResourceBase>		m_menuTexture;
@@ -55,8 +55,8 @@ protected:
 	std::list<std::shared_ptr<Bubble>>	m_bubbles;
 
 	//resource manager
-	std::shared_ptr<ResourceBase>	m_images;
-	std::shared_ptr<ResourceBase>	m_audio;
+	std::shared_ptr<ResourceBase>		m_images;
+	std::shared_ptr<ResourceBase>		m_audio;
 
 	float m_cameraX, m_cameraY;
 	float m_timer;

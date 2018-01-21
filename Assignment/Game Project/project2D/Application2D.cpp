@@ -51,9 +51,9 @@ bool Application2D::startup() {
 
 //test cases for gsm and resource manager
 TEST_CASE("testing GSM", "[GameStateManager]") {
-	GameStateManager* testGSM = new GameStateManager(2);
+	GameStateManager* testGSM = new GameStateManager(5);
 	REQUIRE(testGSM->activeStateCount() == 0);
-
+	REQUIRE(testGSM->totalStateCount() == 5);
 	aie::Renderer2D* renderer = new aie::Renderer2D();
 
 	std::shared_ptr<ResourceBase> font = ResourceManager::getInstance().get("./font/consolas_italic.ttf", ResourceManager::FONT);
@@ -61,17 +61,32 @@ TEST_CASE("testing GSM", "[GameStateManager]") {
 	std::shared_ptr<ResourceBase> menuMusic = ResourceManager::getInstance().get("./audio/happy.wav", ResourceManager::AUDIO);
 
 	MainMenu* testState = new MainMenu(renderer, font, menuTexture, menuMusic, testGSM);
-	
-	SECTION("TESTING STATE COUNT") {
+	PauseMenu* testPause = new PauseMenu(renderer, font,testGSM);
+
+	SECTION("TESTING STATE COUNT before/after pushing states") {
 		testGSM->registerState(MAIN_MENU, testState);
+		testGSM->registerState(PAUSE_MENU, testPause);
 		testGSM->pushState(MAIN_MENU);
+		testGSM->update(1.0f);
+		REQUIRE(testGSM->activeStateCount() == 1);
+		
+		testGSM->pushState(PAUSE_MENU);
+		testGSM->update(1.0f);
+		REQUIRE(testGSM->activeStateCount() == 2);
+		
+		testGSM->popState();
+		testGSM->update(1.0f);
 		REQUIRE(testGSM->activeStateCount() == 1);
 	}
 }
 
-//TEST_CASE("testing Resource Manager", "[ResourceManager]") {
-//	//load in texture resource, test if the enum is the correct type (create bunch of same textures, test getCount + garbage collector)
-//}
+TEST_CASE("testing Resource Manager", "[ResourceManager]") {
+	//load in texture resource, test if the enum is the correct type (create bunch of same textures, test getCount + garbage collector)
+	aie::Renderer2D* renderer = new aie::Renderer2D;
+	std::shared_ptr<ResourceBase> font = ResourceManager::getInstance().get("./font/consolas_italic.ttf", ResourceManager::FONT);
+
+	REQUIRE(font->getFilename() == "./font/consolas_italic.ttf");
+}
 
 void Application2D::shutdown() {
 	

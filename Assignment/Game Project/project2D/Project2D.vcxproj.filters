@@ -79,7 +79,7 @@
       <Filter>Source Files\GSM.cpp</Filter>
     </ClCompile>
     <ClCompile Include="Quit.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\GSM.cpp</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

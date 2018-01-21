@@ -2,6 +2,9 @@
 #include "Texture.h"
 #include "Font.h"
 #include "Input.h"
+#define CATCH_CONFIG_RUNNER
+#include"catch.hpp"
+
 
 Application2D::Application2D() {
 
@@ -13,6 +16,10 @@ Application2D::~Application2D() {
 
 bool Application2D::startup() {
 	
+	//test case stuff
+	int result = Catch::Session().run();
+
+
 	m_2dRenderer = new aie::Renderer2D();
 	m_font = ResourceManager::getInstance().get("./font/consolas_italic.ttf", ResourceManager::FONT);
 	m_menuTexture = ResourceManager::getInstance().get("./textures/title.png", ResourceManager::TEXTURE);
@@ -42,9 +49,34 @@ bool Application2D::startup() {
 	return true;
 }
 
+//test cases for gsm and resource manager
+TEST_CASE("testing GSM", "[GameStateManager]") {
+	GameStateManager* testGSM = new GameStateManager(2);
+	REQUIRE(testGSM->activeStateCount() == 0);
+
+	aie::Renderer2D* renderer = new aie::Renderer2D();
+
+	std::shared_ptr<ResourceBase> font = ResourceManager::getInstance().get("./font/consolas_italic.ttf", ResourceManager::FONT);
+	std::shared_ptr<ResourceBase> menuTexture = ResourceManager::getInstance().get("./textures/title.png", ResourceManager::TEXTURE);
+	std::shared_ptr<ResourceBase> menuMusic = ResourceManager::getInstance().get("./audio/happy.wav", ResourceManager::AUDIO);
+
+	MainMenu* testState = new MainMenu(renderer, font, menuTexture, menuMusic, testGSM);
+	
+	SECTION("TESTING STATE COUNT") {
+		testGSM->registerState(MAIN_MENU, testState);
+		testGSM->pushState(MAIN_MENU);
+		REQUIRE(testGSM->activeStateCount() == 1);
+	}
+}
+
+//TEST_CASE("testing Resource Manager", "[ResourceManager]") {
+//	//load in texture resource, test if the enum is the correct type (create bunch of same textures, test getCount + garbage collector)
+//}
+
 void Application2D::shutdown() {
 	
 	delete m_2dRenderer;
+
 }
 
 void Application2D::update(float deltaTime) {

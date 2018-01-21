@@ -20,6 +20,8 @@ public:
 	EntityDisplayApp();
 	virtual ~EntityDisplayApp();
 
+	HANDLE fileHandle;
+
 	virtual bool startup();
 	virtual void shutdown();
 

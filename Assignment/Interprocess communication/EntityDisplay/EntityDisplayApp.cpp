@@ -18,6 +18,11 @@ bool EntityDisplayApp::startup() {
 
 	setBackgroundColour(1, 1, 1);
 
+
+	fileHandle = OpenFileMapping(FILE_MAP_ALL_ACCESS, FALSE, L"SharedMemory");
+
+	m_entities.resize(10);
+
 	return true;
 
 }
@@ -26,7 +31,8 @@ void EntityDisplayApp::shutdown() {
 
 	delete m_font;
 	delete m_2dRenderer;
-	
+	CloseHandle(fileHandle);
+
 }
 
 void EntityDisplayApp::update(float deltaTime) {
@@ -34,13 +40,17 @@ void EntityDisplayApp::update(float deltaTime) {
 	// input example
 	aie::Input* input = aie::Input::getInstance();
 
-	HANDLE fileHandle = OpenFileMapping(FILE_MAP_ALL_ACCESS, FALSE, L"SharedMemory");
 
 	Entity* entity = (Entity*)MapViewOfFile(fileHandle, FILE_MAP_ALL_ACCESS, 0, 0, sizeof(Entity));
-	if(entity != nullptr){
-		m_entities.push_back(*entity);
+	//if(entity != nullptr){
+	//	m_entities.push_back(*entity);
+	//}
+
+	for (int i = 0; i < m_entities.size(); i++) {
+		m_entities[i] = entity[i];
 	}
 
+	UnmapViewOfFile(fileHandle);
 
 	// exit the application
 	if (input->isKeyDown(aie::INPUT_KEY_ESCAPE))

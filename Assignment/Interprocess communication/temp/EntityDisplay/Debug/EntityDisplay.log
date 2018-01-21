@@ -1,7 +1,6 @@
 ﻿  main.cpp
   EntityDisplayApp.cpp
   Generating Code...
-cl : Command line warning D9028: minimal rebuild failure, reverting to normal build
-  LINK : C:\Users\s170841\Documents\Visual Studio 2015\Projects\Code Design and Data Structures\Assignment\Interprocess communication\temp\EntityDisplay\Debug\EntityDisplay.exe not found or not built by the last incremental link; performing full link
+  LINK : C:\Users\s170841\Downloads\Code-Design-And-Data-Structures-master\Code-Design-And-Data-Structures-master\Assignment\Interprocess communication\temp\EntityDisplay\Debug\EntityDisplay.exe not found or not built by the last incremental link; performing full link
 LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
-  EntityDisplay.vcxproj -> C:\Users\s170841\Documents\Visual Studio 2015\Projects\Code Design and Data Structures\Assignment\Interprocess communication\temp\EntityDisplay\Debug\EntityDisplay.exe
+  EntityDisplay.vcxproj -> C:\Users\s170841\Downloads\Code-Design-And-Data-Structures-master\Code-Design-And-Data-Structures-master\Assignment\Interprocess communication\temp\EntityDisplay\Debug\EntityDisplay.exe

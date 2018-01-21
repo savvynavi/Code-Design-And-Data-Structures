@@ -14,22 +14,13 @@ EntityEditorApp::~EntityEditorApp() {
 }
 
 bool EntityEditorApp::startup() {
-	HANDLE fileHandle = CreateFileMapping(
+	fileHandle = CreateFileMapping(
 		INVALID_HANDLE_VALUE,
 		nullptr,
 		PAGE_READWRITE,
 		0, sizeof(Entity) * ENTITY_COUNT,
 		L"SharedMemory");
 
-	Entity* sharedEntityMem = (Entity*)MapViewOfFile(fileHandle, FILE_MAP_ALL_ACCESS, 0, 0, sizeof(Entity) * ENTITY_COUNT);
-
-	for(int i = 0; i < ENTITY_COUNT; i++){
-		*sharedEntityMem = m_entities[i];
-	}
-
-
-	UnmapViewOfFile(sharedEntityMem);
-	CloseHandle(fileHandle);
 	m_2dRenderer = new aie::Renderer2D();
 	m_font = new aie::Font("./font/consolas.ttf", 32);
 	
@@ -42,6 +33,7 @@ void EntityEditorApp::shutdown() {
 
 	delete m_font;
 	delete m_2dRenderer;
+	CloseHandle(fileHandle);
 }
 
 void EntityEditorApp::update(float deltaTime) {
@@ -87,6 +79,16 @@ void EntityEditorApp::update(float deltaTime) {
 			entity.y += getWindowHeight();
 	}
 	////////////////////////////////////////
+
+
+	Entity* sharedEntityMem = (Entity*)MapViewOfFile(fileHandle, FILE_MAP_ALL_ACCESS, 0, 0, sizeof(Entity) * ENTITY_COUNT);
+
+	//saving array of entities to shared memory
+	for (int i = 0; i < ENTITY_COUNT; i++) {
+		sharedEntityMem[i] = m_entities[i];
+	}
+
+	UnmapViewOfFile(fileHandle);
 
 }
 

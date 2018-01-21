@@ -67,6 +67,10 @@ int GameStateManager::activeStateCount()const{
 	return m_stateStack.size();
 }
 
+int GameStateManager::totalStateCount()const {
+	return m_registeredStates.size();
+}
+
 GameState* GameStateManager::getTopState()const{
 	return m_stateStack.back();
 }

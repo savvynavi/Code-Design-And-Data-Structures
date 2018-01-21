@@ -20,6 +20,8 @@ public:
 	EntityEditorApp();
 	virtual ~EntityEditorApp();
 
+	HANDLE fileHandle;
+
 	virtual bool startup();
 	virtual void shutdown();
 

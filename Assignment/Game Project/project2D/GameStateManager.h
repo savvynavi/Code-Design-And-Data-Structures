@@ -17,6 +17,7 @@ public:
 	void draw();
 
 	int activeStateCount()const;
+	int totalStateCount()const;
 	GameState* getTopState()const;
 	GameState* getState(int id)const;
 private:
